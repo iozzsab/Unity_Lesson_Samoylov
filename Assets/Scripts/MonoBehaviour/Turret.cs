@@ -20,7 +20,7 @@ namespace StartGameDev
 
         void FixedUpdate()
         {
-            if (Vector3.Distance(transform.position, _player.transform.position) < 4)
+            if (Vector3.Distance(transform.position, _player.transform.position) < 3)
             {
                 var direction = _player.transform.position - transform.position;
 
@@ -31,7 +31,7 @@ namespace StartGameDev
         }
         private void Update()
         {
-            if (Vector3.Distance(transform.position, _player.transform.position) < 4)
+            if (Vector3.Distance(transform.position, _player.transform.position) < 3)
             {
                 
                     Fire();
@@ -41,7 +41,7 @@ namespace StartGameDev
         {
             var bulletObj = Instantiate(_bulletPrefab, _bulletSpawnPosition.position, _bulletSpawnPosition.rotation);
             var bullet = bulletObj.GetComponent<Bullet>();
-            bullet.Init(_player.transform, 7, 1);//Transform target, float lifeTime, float speed)
+            bullet.Init(_player.transform, 5, 1);//Transform target, float lifeTime, float speed)
         
         }
     }

@@ -16,7 +16,7 @@ namespace StartGameDev
         {
             print("Ouch" + damage);
 
-            _health -= damage; ;
+            _health -= damage;
             if (_health <= 0)
             {
                 Die();

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 namespace StartGameDev
 {
@@ -15,7 +16,10 @@ namespace StartGameDev
         public float Speed = 5f;
         public bool isGrounded;
         Vector3 m_Movement;
+     
 
+         
+        
         public enum RotationAxes
         {
             MouseXAndY = 0,
@@ -33,6 +37,8 @@ namespace StartGameDev
             Rigidbody body = GetComponent<Rigidbody>();
             if (body != null)
                 body.freezeRotation = true;
+
+       
         }
         void Update()
         {

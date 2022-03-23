@@ -17,8 +17,8 @@ namespace StartGameDev
         }
         void FixedUpdate()
         {
-            //transform.position = Vector3.MoveTowards(transform.position, _target.position, _speed);
-            transform.position += transform.forward * _speed * Time.fixedDeltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, _target.position, _speed);
+            //transform.position += transform.forward * _speed * Time.fixedDeltaTime;
         }
     }
 
