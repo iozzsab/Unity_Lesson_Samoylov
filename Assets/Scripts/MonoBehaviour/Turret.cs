@@ -24,7 +24,7 @@ namespace StartGameDev
             {
                 var direction = _player.transform.position - transform.position;
 
-                var stepRotate = Vector3.RotateTowards(transform.forward, direction, _speedRotate * Time.fixedDeltaTime, 0f);
+                var stepRotate = Vector3.RotateTowards(transform.forward, direction, _speedRotate * Time.fixedDeltaTime, 5f);
 
                 transform.rotation = Quaternion.LookRotation(stepRotate);
             }

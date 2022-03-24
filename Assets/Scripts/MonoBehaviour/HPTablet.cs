@@ -28,7 +28,7 @@ namespace StartGameDev
         
         public int hPoint;
         public Text hpText;
-        public int hpDamage;
+        
         public int takeHP;
 
         
@@ -39,13 +39,7 @@ namespace StartGameDev
 
          private void OnTroggerEnter(Collision other)
          {
-             if (other.gameObject.tag == "bullet")
-
-             {
-                 hPoint = hPoint - hpDamage;
-                 hpText.text = "Health: " + hPoint.ToString();
-
-             }
+                          
              if (hPoint <= 0)
              {
                  Destroy(gameObject);

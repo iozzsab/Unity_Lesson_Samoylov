@@ -15407,7 +15407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6742e9c7785e346a2d1e4e312332f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPBoost: 20
+  HPBoost: 50
 --- !u!1 &1112259063
 GameObject:
   m_ObjectHideFlags: 0
@@ -25857,7 +25857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6742e9c7785e346a2d1e4e312332f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPBoost: 20
+  HPBoost: 50
 --- !u!1001 &1864603691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28939,7 +28939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6742e9c7785e346a2d1e4e312332f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPBoost: 20
+  HPBoost: 50
 --- !u!1001 &2073379983
 PrefabInstance:
   m_ObjectHideFlags: 0

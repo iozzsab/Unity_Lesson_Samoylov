@@ -21,16 +21,29 @@ namespace StartGameDev
         {
             print("Tasty" + HPBoost);
 
-            _HP += HPBoost;
+            _HP = _HP + HPBoost;
+
+            if (_HP > 150)
+            {
+                _HP = 150;
+            }
+            hpText.text = "Health: " + _HP.ToString();
+
             if (_HP <= 0)
             {
                 Destroy(gameObject);
             }
+            
 
         }
         private void Die()
         {
             Destroy(gameObject);
+        }
+        private void Update()
+        {
+            
+           
         }
     }
 }
