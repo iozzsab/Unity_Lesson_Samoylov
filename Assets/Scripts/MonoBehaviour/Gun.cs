@@ -6,9 +6,9 @@ namespace StartGameDev
 {
     public class Gun : MonoBehaviour
     {
-        [SerializeField] private float damage;
+        //[SerializeField] private float damage;
         [SerializeField] private float range;
-        [SerializeField] private float fireRate;
+        //[SerializeField] private float fireRate;
         [SerializeField] private float force;
         [SerializeField] private ParticleSystem shotBullet;
         [SerializeField] private Transform bulletSpawn;
@@ -18,8 +18,7 @@ namespace StartGameDev
         {
 
         }
-
-       
+               
         void Update()
         {
             if (Input.GetButtonDown("Fire1"))
@@ -34,7 +33,7 @@ namespace StartGameDev
             
             
             RaycastHit hit;
-           if (Physics.Raycast(transform.forward, _cam.transform.position, out hit, range))
+           if (Physics.Raycast(bulletSpawn.transform.position, _cam.transform.forward, out hit, range)) //пытался чтобы выстрел отталкивал в сторону обзора камеры, а он наоборот притягивает...
             {
                 Debug.Log("Выстрел", hit.collider);
             }

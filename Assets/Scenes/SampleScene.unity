@@ -17210,9 +17210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e5ec0a5151dcf478fc362737a82cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
   range: 20
-  fireRate: 0
   force: 200
   shotBullet: {fileID: 537172569}
   bulletSpawn: {fileID: 786131403}

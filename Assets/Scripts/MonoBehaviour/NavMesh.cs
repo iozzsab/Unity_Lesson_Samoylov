@@ -21,7 +21,7 @@ namespace StartGameDev
 		void Update()
 		{
 			
-			agent.SetDestination(target.position);
+			agent.SetDestination(target.position); //я понимаю ошибку в нонсоле, но не понимаю как от неё избавится
 		}
 		
 	}
