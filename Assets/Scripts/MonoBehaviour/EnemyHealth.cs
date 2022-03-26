@@ -4,14 +4,14 @@ using UnityEngine;
 
 namespace StartGameDev
 {
-    public class Enemy : MonoBehaviour
+    public class EnemyHealth : MonoBehaviour
 
     {
 
         [SerializeField] public GameObject _gameObject;
-        [SerializeField] public Transform EndPositions;
+        
 
-        [SerializeField] public int _health;
+        [SerializeField] public int _health = 100;
         
         
         public void Hurt(int damage)
@@ -29,11 +29,7 @@ namespace StartGameDev
             Destroy(_gameObject);
 
         }
-        private void FixedUpdate()
-        {
-           
-           transform.position = Vector3.MoveTowards(transform.position, EndPositions.position, Time.deltaTime);
-        }
+        
     }
 }
 
