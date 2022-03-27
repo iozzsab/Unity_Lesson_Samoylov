@@ -9,10 +9,12 @@ namespace StartGameDev
 		EnemyVision navMesh;
 		public Transform target;
 		NavMeshAgent agent;
+		
 
 		void Start()
 		{
 			agent = GetComponent<NavMeshAgent>();
+			
 
 		}
 
@@ -20,9 +22,12 @@ namespace StartGameDev
 		
 		void Update()
 		{
+			if (agent.enabled)
+			{
+				agent.SetDestination(target.position);
+			}
 			
-			agent.SetDestination(target.position); //я понимаю ошибку в нонсоле, но не понимаю как от неё избавится
 		}
-		
+	
 	}
 }

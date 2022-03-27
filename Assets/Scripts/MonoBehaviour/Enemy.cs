@@ -10,8 +10,8 @@ namespace StartGameDev
 
         [SerializeField] public GameObject _gameObject;
         [SerializeField] public Transform EndPositions;
+        [SerializeField] private int _health;
 
-        [SerializeField] public int _health;
         
         
         public void Hurt(int damage)

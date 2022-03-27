@@ -13,7 +13,7 @@ public abstract class ITriggegByTag : MonoBehaviour
         {
             if (collider.isTrigger) return;
         }
-        Debug.LogWarning($"No trigger in ibject {name}, condition will never be satisfied!");
+        Debug.LogWarning($"Нет триггера в объекте {name}, условие не будет удовлетворено!");
     }
 
     private void OnTriggerEnter(Collider other)

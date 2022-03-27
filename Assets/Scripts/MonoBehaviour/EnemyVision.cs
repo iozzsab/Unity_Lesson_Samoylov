@@ -15,12 +15,16 @@ namespace StartGameDev
         public int distance = 30;
         public float angle = 35;
 
+        //private Transform homePositions;
+
 
         void Start()
         {
             //targetTag = gameObject.FindGameOnject("Player");
             target = GameObject.FindGameObjectWithTag(targetTag).transform;
             navMesh = GetComponent<NavMeshAgent>();
+
+            //homePositions = GetComponent<Transform>();
         }
 
         bool RayToScan()
@@ -86,8 +90,17 @@ namespace StartGameDev
                 else
                 {
                     navMesh.enabled = false;
+                    //GoHome();
                 }
             }
+
+        
         }
+        /*
+         private void GoHome()
+        {
+            transform.position = Vector3.MoveTowards(transform.position, homePositions.position, Time.deltaTime);
+        }
+        */
     }
 }

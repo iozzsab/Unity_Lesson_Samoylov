@@ -33,7 +33,7 @@ namespace StartGameDev
             
             
             RaycastHit hit;
-           if (Physics.Raycast(bulletSpawn.transform.position, _cam.transform.forward, out hit, range)) //пытался чтобы выстрел отталкивал в сторону обзора камеры, а он наоборот притягивает...
+           if (Physics.Raycast(bulletSpawn.transform.position, _cam.transform.forward, out hit, range))
             {
                 Debug.Log("Выстрел", hit.collider);
             }

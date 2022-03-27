@@ -94,10 +94,13 @@ GameObject:
   - component: {fileID: 8417577089398499856}
   - component: {fileID: 8417577089398499857}
   - component: {fileID: 8417577089398499854}
+  - component: {fileID: 3192086137009212146}
+  - component: {fileID: -2577964740777258330}
   - component: {fileID: 8417577089398499859}
   - component: {fileID: 8417577089398499852}
   - component: {fileID: 8417577089398499855}
   - component: {fileID: 8417577089398499858}
+  - component: {fileID: -736503289186010081}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -170,6 +173,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3192086137009212146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8417577089398499853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a4f0f9e8f4e2439cb6793027d0396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  takePower: 10
+  dropPower: 10
+  rayDistance: 3
+  Take: 0
+  Drop: 0
+  offset: {fileID: 0}
+--- !u!114 &-2577964740777258330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8417577089398499853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be890fd244e8a2448259f1ab780abf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _PlayerMine: {fileID: 8951194713562306392, guid: c7cd148ecd796064aa6bd0fabebfcf73, type: 3}
 --- !u!114 &8417577089398499859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +266,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _HP: 100
-  hpText: {fileID: 0}
+  hpText: {fileID: 2339791710551558187, guid: 7d4ea7202fe996c4cbd87007812efc80, type: 3}
+--- !u!114 &-736503289186010081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8417577089398499853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ec4a99353d94948b260f426b098674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distanceTx: {fileID: 5893418141813602952, guid: a6bf2482d19b4ed4d90a3ddf53de6670, type: 3}
+  _distanceValue: 0
+  _grenadePrefab: {fileID: 270712861767643996, guid: da139098816d157429971bac496889ef, type: 3}
 --- !u!1 &8479126507709289359
 GameObject:
   m_ObjectHideFlags: 0

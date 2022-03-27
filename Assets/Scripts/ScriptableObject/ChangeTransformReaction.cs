@@ -12,16 +12,18 @@ public class ChangeTransformReaction : IReaction
 
     public override void React()
     {
-        transform.position = end_target_position;
+        
+        transform.position = end_target_position * Time.deltaTime;
         
     }
     //transform.position = Vector3.MoveTowards(transform.position, end_target_position, speed * Time.deltaTime);
-    //transform.position = Vector3.MoveTowards(transform.position, end_target_position, Time.deltaTime);
+    //transform.position = Vector3.(transform.position, end_target_position, Time.deltaTime);
 
     private void Update()
     {
         
-        
+
+
     }
 }
 

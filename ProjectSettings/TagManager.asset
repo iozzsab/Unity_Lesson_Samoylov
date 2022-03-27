@@ -9,6 +9,7 @@ TagManager:
   - Enemy2
   - HealPoint
   - bullet
+  - blackBox
   layers:
   - Default
   - TransparentFX
