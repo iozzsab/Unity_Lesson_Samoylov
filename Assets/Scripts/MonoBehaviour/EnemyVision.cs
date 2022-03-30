@@ -87,11 +87,11 @@ namespace StartGameDev
                 {
                     navMesh.enabled = true;
                 }
-                else
-                {
-                    navMesh.enabled = false;
+               // else
+               // {
+               //     navMesh.enabled = false;
                     //GoHome();
-                }
+               // }
             }
 
         

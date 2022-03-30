@@ -9,20 +9,32 @@ namespace StartGameDev
 
     {
         [SerializeField] private int HPBoost;
-        
+
         private void OnTriggerEnter(Collider other)
         {
 
             if (other.gameObject.CompareTag("Player"))
             {
-                
+
                 var player = other.GetComponent<HPPlayer>();
                 player.HPBoosted(HPBoost);
-                
+
                 Destroy(gameObject);
             }
-            
+
         }
+        public void Update()
+        {
+            Rotator();  
+        }
+
+        public void Rotator()
+        {
+            transform.Rotate(Vector3.up * Time.deltaTime * 100f, Space.World);
+            transform.Rotate(Vector3.left * Time.deltaTime * 100f, Space.World);
+        }
+    }
+}
 
         /*
         
@@ -70,5 +82,3 @@ namespace StartGameDev
 
 
 
-    }
-}

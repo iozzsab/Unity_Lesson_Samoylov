@@ -10,6 +10,7 @@ TagManager:
   - HealPoint
   - bullet
   - blackBox
+  - unwanted zone
   layers:
   - Default
   - TransparentFX
