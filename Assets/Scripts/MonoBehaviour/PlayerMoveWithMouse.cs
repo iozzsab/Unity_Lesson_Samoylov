@@ -16,10 +16,14 @@ namespace StartGameDev
         public float Speed = 5f;
         public bool isGrounded;
         Vector3 m_Movement;
-     
+        [SerializeField] private Animator _anim;
 
-         
-        
+
+        private void Awake()
+        {
+            _anim = GetComponent<Animator>();   
+        }
+
         public enum RotationAxes
         {
             MouseXAndY = 0,
@@ -69,15 +73,22 @@ namespace StartGameDev
         }
         void FixedUpdate()
         {
-            MovementLogic();
+           MovementLogic();
+
+            _anim.SetBool("isWheelR", m_Movement != Vector3.zero);
+
+                
         }
         private void MovementLogic()
         {
             float moveHorizontal = Input.GetAxis("Horizontal");
             float moveVertical = Input.GetAxis("Vertical");
 
+
             m_Movement.Set(moveHorizontal, 0f, moveVertical);
             m_Movement.Normalize();
+
+            
 
             Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
             transform.Translate(movement * Speed * Time.fixedDeltaTime);
