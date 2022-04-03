@@ -14,12 +14,18 @@ namespace StartGameDev
         public float maxVertical = 90.0f;
         private float _rotationX = 0;
         public float Speed = 5f;
+        public int jumpRange;
         public bool isGrounded;
         Vector3 m_Movement;
         [SerializeField] private Animator _anim;
 
+        public void JumpBoosted(int JBoost)
+        {
 
-        private void Awake()
+            jumpRange = jumpRange + JBoost;
+        }
+
+            private void Awake()
         {
             _anim = GetComponent<Animator>();   
         }
@@ -44,7 +50,7 @@ namespace StartGameDev
 
        
         }
-        void Update()
+        public void Update()
         {
             if (axes == RotationAxes.MouseX)
             {
@@ -68,7 +74,7 @@ namespace StartGameDev
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
                 isGrounded = false;
-                GetComponent<Rigidbody>().AddForce(new Vector3(0, 200, 0));
+                GetComponent<Rigidbody>().AddForce(new Vector3(0, jumpRange, 0));
             }
         }
         void FixedUpdate()
