@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 namespace StartGameDev
 {
     public class Grenade : MonoBehaviour
     {
         public Transform _explosionPrefab;
         [SerializeField] public int damage;
+        
 
         void OnCollisionEnter(Collision collision)
         {
@@ -17,6 +18,7 @@ namespace StartGameDev
             Vector3 pos = contact.point;
             Instantiate(_explosionPrefab, pos, rot);
             Destroy(gameObject);
+
         }
         private void OnTriggerEnter(Collider other)
         {

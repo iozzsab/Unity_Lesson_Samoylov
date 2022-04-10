@@ -64,6 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _explosionPrefab: {fileID: 4829211422613168167, guid: 63d3eafc7e126c94abb338747e70c502, type: 3}
   damage: 50
+  AudioGrenade: {fileID: 0}
 --- !u!136 &8295582993899498563
 CapsuleCollider:
   m_ObjectHideFlags: 0

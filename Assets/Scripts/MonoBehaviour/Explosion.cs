@@ -11,7 +11,7 @@ namespace StartGameDev
 
         void Start()
         {
-            Destroy(Light, 0.1f);
+            Destroy(Light, 1f);
 
             Vector3 explosionPos = transform.position;
             Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
